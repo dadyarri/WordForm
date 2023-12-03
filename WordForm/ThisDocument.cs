@@ -11,14 +11,6 @@ namespace WordForm
     {
         private void ThisDocument_Startup(object sender, System.EventArgs e)
         {
-            // var lcid = Application.LanguageSettings.LanguageID[Office.MsoAppLanguageID.msoLanguageIDUI];
-            // var culture = new CultureInfo(lcid);
-            //
-            // var languages = new[] { "en", "ru" };
-            // if (languages.Contains(culture.TwoLetterISOLanguageName))
-            // {
-            //     Resources.Culture = culture;
-            // }
         }
 
         private void ThisDocument_Shutdown(object sender, System.EventArgs e)
