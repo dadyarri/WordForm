@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Office = Microsoft.Office.Core;
 
-namespace Common.Xml
+namespace WordForm.Xml
 {
     internal class XmlUtils
     {
