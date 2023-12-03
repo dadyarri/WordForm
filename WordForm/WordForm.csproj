@@ -12,12 +12,35 @@
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <DefineConstants>VSTO40</DefineConstants>
     <OfficeApplication>Word</OfficeApplication>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
-    <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
     <ProjectGuid>{DB7EEB4B-F784-4A2F-A692-10E9BAB402F7}</ProjectGuid>
     <SolutionID>2df9d0b7-29a0-47d9-8f15-f9bcf01b291b</SolutionID>
+    <IsWebBootstrapper>False</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <PublishUrl>publish\</PublishUrl>
+    <InstallUrl />
+    <TargetCulture>en</TargetCulture>
+    <ApplicationVersion>1.0.0.1</ApplicationVersion>
+    <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>days</UpdateIntervalUnits>
+    <ProductName>WordForm</ProductName>
+    <PublisherName />
+    <SupportUrl />
+    <FriendlyName>WordForm</FriendlyName>
+    <OfficeApplicationDescription />
   </PropertyGroup>
   <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
       <Visible>False</Visible>
       <ProductName>Microsoft Visual Studio 2010 Tools for Office Runtime %28x86 and x64%29</ProductName>
@@ -102,15 +125,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="WordForm.dotx" />
-    <Compile Include="FormRibbon.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="FormRibbon.Designer.cs">
-      <DependentUpon>FormRibbon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ribbon.cs">
-      <XmlRibbon>true</XmlRibbon>
-    </Compile>
     <Compile Include="ThisDocument.cs">
       <DependentUpon>WordForm.dotx</DependentUpon>
     </Compile>
@@ -121,9 +135,6 @@
       <DependentUpon>ThisDocument.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormRibbon.resx">
-      <DependentUpon>FormRibbon.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -144,9 +155,6 @@
     </Compile>
     <None Include="WordForm_TemporaryKey.pfx" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Ribbon.xml" />
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -166,8 +174,8 @@
     <VisualStudio>
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
         <ProjectProperties HostName="WordForm.dotx" HostPackage="{18A3A5AC-5778-4778-901C-ADAAC08E910A}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="DOT" Language="CS" TemplatesPath="VSTOTemplates" DebugInfoExeName="C:\Program Files\Microsoft Office\root\Office16\winword.exe" DebugInfoCommandLine="/w /z&quot;[$OUTPUT]WordForm.dotx&quot;" />
-        <Host Name="Word Document" Path=".\WordForm.dotx" GeneratedCodeNamespace="WordForm">
-          <HostItem Name="ThisDocument" Code="ThisDocument.cs" CanonicalName="ThisDocument" Blueprint="ThisDocument.Designer.xml" GeneratedCode="ThisDocument.Designer.cs" />
+        <Host Name="Word Document" Path=".\WordForm.dotx" GeneratedCodeNamespace="WordForm" PublishedHash="CFECFF3FB805E9A295392C4C85A42160CA201773">
+          <HostItem Name="ThisDocument" Code="ThisDocument.cs" CanonicalName="ThisDocument" Blueprint="ThisDocument.Designer.xml" GeneratedCode="ThisDocument.Designer.cs" PublishedHash="FAF06C1E47C671D684D339C6A73073566F6E8E04" />
         </Host>
       </FlavorProperties>
     </VisualStudio>

@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.Xml.Linq;
-using Microsoft.Office.Tools.Word;
-using Microsoft.VisualStudio.Tools.Applications.Runtime;
-using Office = Microsoft.Office.Core;
-using Word = Microsoft.Office.Interop.Word;
-
-namespace WordForm
+﻿namespace WordForm
 {
     public partial class ThisDocument
     {
