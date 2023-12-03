@@ -1,4 +1,10 @@
-﻿namespace WordForm
+﻿using System.Globalization;
+using System.Linq;
+using Microsoft.Office.Interop.Word;
+using WordForm.Properties;
+using Office = Microsoft.Office.Core;
+
+namespace WordForm
 {
     partial class FormRibbon : Microsoft.Office.Tools.Ribbon.RibbonBase
     {
@@ -49,34 +55,34 @@
             // 
             this.formRibbonCustomizationTab.Groups.Add(this.customizeFormGroup);
             this.formRibbonCustomizationTab.Groups.Add(this.fillDocumentGroup);
-            this.formRibbonCustomizationTab.Label = "Form";
+            this.formRibbonCustomizationTab.Label = global::WordForm.Properties.Resources.Label_Form;
             this.formRibbonCustomizationTab.Name = "formRibbonCustomizationTab";
             // 
             // customizeFormGroup
             // 
             this.customizeFormGroup.Items.Add(this.customizeFormButton);
-            this.customizeFormGroup.Label = "Customize form";
+            this.customizeFormGroup.Label = global::WordForm.Properties.Resources.Label_CustomizeForm;
             this.customizeFormGroup.Name = "customizeFormGroup";
             // 
             // customizeFormButton
             // 
             this.customizeFormButton.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.customizeFormButton.Image = ((System.Drawing.Image)(resources.GetObject("customizeFormButton.Image")));
-            this.customizeFormButton.Label = "Customize form";
+            this.customizeFormButton.Label = global::WordForm.Properties.Resources.Label_CustomizeForm;
             this.customizeFormButton.Name = "customizeFormButton";
             this.customizeFormButton.ShowImage = true;
             // 
             // fillDocumentGroup
             // 
             this.fillDocumentGroup.Items.Add(this.fiilInFormButton);
-            this.fillDocumentGroup.Label = "Fill document";
+            this.fillDocumentGroup.Label = global::WordForm.Properties.Resources.Label_FillDocument;
             this.fillDocumentGroup.Name = "fillDocumentGroup";
             // 
             // fiilInFormButton
             // 
             this.fiilInFormButton.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.fiilInFormButton.Image = ((System.Drawing.Image)(resources.GetObject("fiilInFormButton.Image")));
-            this.fiilInFormButton.Label = "Fill in the form";
+            this.fiilInFormButton.Label = global::WordForm.Properties.Resources.Label_FillDocument;
             this.fiilInFormButton.Name = "fiilInFormButton";
             this.fiilInFormButton.ShowImage = true;
             // 

@@ -8,7 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Globalization;
+
 namespace WordForm.Properties {
+    using System;
     
     
     /// <summary>
@@ -18,7 +21,7 @@ namespace WordForm.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -56,6 +59,33 @@ namespace WordForm.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Customize form.
+        /// </summary>
+        internal static string Label_CustomizeForm {
+            get {
+                return ResourceManager.GetString("Label_CustomizeForm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fill document.
+        /// </summary>
+        internal static string Label_FillDocument {
+            get {
+                return ResourceManager.GetString("Label_FillDocument", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Form.
+        /// </summary>
+        internal static string Label_Form {
+            get {
+                return ResourceManager.GetString("Label_Form", resourceCulture);
             }
         }
     }

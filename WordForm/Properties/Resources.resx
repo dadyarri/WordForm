@@ -114,4 +114,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Label_Form" xml:space="preserve">
+    <value>Form</value>
+  </data>
+  <data name="Label_CustomizeForm" xml:space="preserve">
+    <value>Customize form</value>
+  </data>
+  <data name="Label_FillDocument" xml:space="preserve">
+    <value>Fill document</value>
+  </data>
 </root>
