@@ -124,14 +124,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Xml\XmlUtils.cs" />
     <EmbeddedResource Include="Properties\Resources.ru-ru.resx">
       <DependentUpon>Resources.resx</DependentUpon>
     </EmbeddedResource>
     <None Include="WordForm.dotx" />
-    <Compile Include="FormRibbon.cs">
+    <Compile Include="Ribbon\FormRibbon.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="FormRibbon.Designer.cs">
+    <Compile Include="Ribbon\FormRibbon.Designer.cs">
       <DependentUpon>FormRibbon.cs</DependentUpon>
     </Compile>
     <Compile Include="ThisDocument.cs">
@@ -144,10 +145,10 @@
       <DependentUpon>ThisDocument.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormRibbon.resx">
+    <EmbeddedResource Include="Ribbon\FormRibbon.resx">
       <DependentUpon>FormRibbon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRibbon.ru-ru.resx">
+    <EmbeddedResource Include="Ribbon\FormRibbon.ru-ru.resx">
       <DependentUpon>FormRibbon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -171,6 +172,7 @@
     </Compile>
     <None Include="WordForm_TemporaryKey.pfx" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
