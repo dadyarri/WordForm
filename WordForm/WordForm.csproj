@@ -125,6 +125,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="WordForm.dotx" />
+    <Compile Include="FormRibbon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormRibbon.Designer.cs">
+      <DependentUpon>FormRibbon.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThisDocument.cs">
       <DependentUpon>WordForm.dotx</DependentUpon>
     </Compile>
@@ -135,6 +141,9 @@
       <DependentUpon>ThisDocument.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormRibbon.resx">
+      <DependentUpon>FormRibbon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
