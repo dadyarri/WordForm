@@ -1,7 +1,4 @@
-﻿using System.Globalization;
-using System.Linq;
-using Microsoft.Office.Interop.Word;
-using WordForm.Properties;
+﻿using Microsoft.Office.Tools.Ribbon;
 using Office = Microsoft.Office.Core;
 
 namespace WordForm
@@ -41,74 +38,74 @@ namespace WordForm
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRibbon));
-            this.formRibbonCustomizationTab = this.Factory.CreateRibbonTab();
-            this.customizeFormGroup = this.Factory.CreateRibbonGroup();
-            this.customizeFormButton = this.Factory.CreateRibbonButton();
-            this.fillDocumentGroup = this.Factory.CreateRibbonGroup();
-            this.fiilInFormButton = this.Factory.CreateRibbonButton();
-            this.formRibbonCustomizationTab.SuspendLayout();
-            this.customizeFormGroup.SuspendLayout();
-            this.fillDocumentGroup.SuspendLayout();
-            this.SuspendLayout();
+            formRibbonCustomizationTab = Factory.CreateRibbonTab();
+            customizeFormGroup = Factory.CreateRibbonGroup();
+            customizeFormButton = Factory.CreateRibbonButton();
+            fillDocumentGroup = Factory.CreateRibbonGroup();
+            fiilInFormButton = Factory.CreateRibbonButton();
+            formRibbonCustomizationTab.SuspendLayout();
+            customizeFormGroup.SuspendLayout();
+            fillDocumentGroup.SuspendLayout();
+            SuspendLayout();
             // 
             // formRibbonCustomizationTab
             // 
-            this.formRibbonCustomizationTab.Groups.Add(this.customizeFormGroup);
-            this.formRibbonCustomizationTab.Groups.Add(this.fillDocumentGroup);
-            this.formRibbonCustomizationTab.Label = global::WordForm.Properties.Resources.Label_Form;
-            this.formRibbonCustomizationTab.Name = "formRibbonCustomizationTab";
+            formRibbonCustomizationTab.Groups.Add(customizeFormGroup);
+            formRibbonCustomizationTab.Groups.Add(fillDocumentGroup);
+            formRibbonCustomizationTab.Label = global::WordForm.Properties.Resources.Label_Form;
+            formRibbonCustomizationTab.Name = "formRibbonCustomizationTab";
             // 
             // customizeFormGroup
             // 
-            this.customizeFormGroup.Items.Add(this.customizeFormButton);
-            this.customizeFormGroup.Label = global::WordForm.Properties.Resources.Label_CustomizeForm;
-            this.customizeFormGroup.Name = "customizeFormGroup";
+            customizeFormGroup.Items.Add(customizeFormButton);
+            customizeFormGroup.Label = global::WordForm.Properties.Resources.Label_CustomizeForm;
+            customizeFormGroup.Name = "customizeFormGroup";
             // 
             // customizeFormButton
             // 
-            this.customizeFormButton.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.customizeFormButton.Image = ((System.Drawing.Image)(resources.GetObject("customizeFormButton.Image")));
-            this.customizeFormButton.Label = global::WordForm.Properties.Resources.Label_CustomizeForm;
-            this.customizeFormButton.Name = "customizeFormButton";
-            this.customizeFormButton.ShowImage = true;
+            customizeFormButton.ControlSize = Office.RibbonControlSize.RibbonControlSizeLarge;
+            customizeFormButton.Image = ((System.Drawing.Image)(resources.GetObject("customizeFormButton.Image")));
+            customizeFormButton.Label = global::WordForm.Properties.Resources.Label_CustomizeForm;
+            customizeFormButton.Name = "customizeFormButton";
+            customizeFormButton.ShowImage = true;
             // 
             // fillDocumentGroup
             // 
-            this.fillDocumentGroup.Items.Add(this.fiilInFormButton);
-            this.fillDocumentGroup.Label = global::WordForm.Properties.Resources.Label_FillDocument;
-            this.fillDocumentGroup.Name = "fillDocumentGroup";
+            fillDocumentGroup.Items.Add(fiilInFormButton);
+            fillDocumentGroup.Label = global::WordForm.Properties.Resources.Label_FillDocument;
+            fillDocumentGroup.Name = "fillDocumentGroup";
             // 
             // fiilInFormButton
             // 
-            this.fiilInFormButton.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.fiilInFormButton.Image = ((System.Drawing.Image)(resources.GetObject("fiilInFormButton.Image")));
-            this.fiilInFormButton.Label = global::WordForm.Properties.Resources.Label_FillDocument;
-            this.fiilInFormButton.Name = "fiilInFormButton";
-            this.fiilInFormButton.ShowImage = true;
+            fiilInFormButton.ControlSize = Office.RibbonControlSize.RibbonControlSizeLarge;
+            fiilInFormButton.Image = ((System.Drawing.Image)(resources.GetObject("fiilInFormButton.Image")));
+            fiilInFormButton.Label = global::WordForm.Properties.Resources.Label_FillDocument;
+            fiilInFormButton.Name = "fiilInFormButton";
+            fiilInFormButton.ShowImage = true;
             // 
             // FormRibbon
             // 
-            this.Name = "FormRibbon";
-            this.RibbonType = "Microsoft.Word.Document";
-            this.Tabs.Add(this.formRibbonCustomizationTab);
-            this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.FormRibbon_Load);
-            this.formRibbonCustomizationTab.ResumeLayout(false);
-            this.formRibbonCustomizationTab.PerformLayout();
-            this.customizeFormGroup.ResumeLayout(false);
-            this.customizeFormGroup.PerformLayout();
-            this.fillDocumentGroup.ResumeLayout(false);
-            this.fillDocumentGroup.PerformLayout();
-            this.ResumeLayout(false);
+            Name = "FormRibbon";
+            RibbonType = "Microsoft.Word.Document";
+            Tabs.Add(formRibbonCustomizationTab);
+            Load += new RibbonUIEventHandler(FormRibbon_Load);
+            formRibbonCustomizationTab.ResumeLayout(false);
+            formRibbonCustomizationTab.PerformLayout();
+            customizeFormGroup.ResumeLayout(false);
+            customizeFormGroup.PerformLayout();
+            fillDocumentGroup.ResumeLayout(false);
+            fillDocumentGroup.PerformLayout();
+            ResumeLayout(false);
 
         }
 
         #endregion
 
-        internal Microsoft.Office.Tools.Ribbon.RibbonTab formRibbonCustomizationTab;
-        internal Microsoft.Office.Tools.Ribbon.RibbonGroup customizeFormGroup;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton customizeFormButton;
-        internal Microsoft.Office.Tools.Ribbon.RibbonGroup fillDocumentGroup;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton fiilInFormButton;
+        internal RibbonTab formRibbonCustomizationTab;
+        internal RibbonGroup customizeFormGroup;
+        internal RibbonButton customizeFormButton;
+        internal RibbonGroup fillDocumentGroup;
+        internal RibbonButton fiilInFormButton;
     }
 
     partial class ThisRibbonCollection
