@@ -67,6 +67,7 @@ namespace WordForm.Ribbon
             this.customizeFormButton.Label = global::WordForm.Properties.Resources.Label_CustomizeForm;
             this.customizeFormButton.Name = "customizeFormButton";
             this.customizeFormButton.ShowImage = true;
+            this.customizeFormButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.customizeFormButton_Click);
             // 
             // fillDocumentGroup
             // 
@@ -105,13 +106,5 @@ namespace WordForm.Ribbon
         internal RibbonButton customizeFormButton;
         internal RibbonGroup fillDocumentGroup;
         internal RibbonButton fiilInFormButton;
-    }
-
-    partial class ThisRibbonCollection
-    {
-        internal FormRibbon FormRibbon
-        {
-            get { return this.GetRibbon<FormRibbon>(); }
-        }
     }
 }

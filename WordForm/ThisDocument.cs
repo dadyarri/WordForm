@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Threading;
 using WordForm.Properties;
+using WordForm.Ribbon;
 using Office = Microsoft.Office.Core;
 using Word = Microsoft.Office.Interop.Word;
 
